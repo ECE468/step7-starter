@@ -1,5 +1,5 @@
 # Step 7: Choose Your Own Adventure
-## Due: December 4th, 5 pm EST (10 pm UTC) [Free extension until December 7th]
+## Due: December 4th, 11:59 pm EST [Free extension until December 7th]
 
 ## Setting up your repository
 
