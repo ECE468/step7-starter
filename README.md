@@ -231,10 +231,10 @@ For option 3, we will using the similar grading scheme as ECE 573 in step 5, for
    your assembly output (denoted as `S`) and the reference output (denoted `R`). Then, your credits for this
    particular test would be adjusted by:
 
-        ```(text)
-        if S >= R: R/S * 60%
-        if S < R: 60% + MIN(25%, 1 - S/R) / 25% * 40%
-        ```
+	```(text)
+	if S >= R: R/S * 60%
+	if S < R: 60% + MIN(25%, 1 - S/R) / 25% * 40%
+	```
 
 	- The reference output and implementation are based on basic-block-only register allocation, without any liveness analysis. Thus we expect your implementation based to perform better in memory accesses.
 	- You will get full credit if you beat the reference memory performance by more than 25%.
