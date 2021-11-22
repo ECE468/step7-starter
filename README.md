@@ -236,8 +236,8 @@ For option 3, we will using the similar grading scheme as ECE 573 in step 5, for
         if S < R: 60% + MIN(25%, 1 - S/R) / 25% * 40%
         ```
 
-        - The reference output and implementation are based on basic-block-only register allocation, without any liveness analysis. Thus we expect your implementation based to perform better in memory accesses.
-        - You will get full credit if you beat the reference memory performance by more than 25%.
+	- The reference output and implementation are based on basic-block-only register allocation, without any liveness analysis. Thus we expect your implementation based to perform better in memory accesses.
+	- You will get full credit if you beat the reference memory performance by more than 25%.
 
 Credits for each test cases are distributed evenly. After adjustment of performance, the credits will be accumulated together to reflect your total grades. Then the late submission penalties, if any, would be applied to produce your final grades for the step.
 
