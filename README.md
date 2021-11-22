@@ -1,11 +1,13 @@
 # Step 7: Choose Your Own Adventure
-## Due: December 4th, 11:59 pm EST [Free extension until December 7th]
+## Due: Dec 15th, 5 pm EDT (10 pm UTC)
 
 ## Setting up your repository
 
-Set up your GitHub classroom repository for step 7 using the link on Brightspace
+Set up your GitHub classroom repository for step 7 using the link on Brightspace.
 
-Then clone your repository as directed in the cloning and submitting instructions
+Set up your project development and testing environment as directed in the [project environment documentations](https://cap.ecn.purdue.edu/compilers/project/).
+
+Then clone your repository as directed in the cloning and submitting instructions.
 
 ## Background
 
@@ -217,14 +219,42 @@ To implement this option, you need to do the following:
     *on*. If we do not pass that option to your `runme`, it should use your Step 5 code. (Note that turning on this
     optimization *should* result in your code taking fewer cycles to complete).
 
+**Note on grading:**
+
+For option 3, we will using the similar grading scheme as ECE 573 in step 5, for each one of the tests included in the test set:
+
+1. Your generated assembly will be checked against the reference output on the simulator with 32 registers, to
+   ensure that your code correctly behaves as compared to reference. If your code fails this check, you won't
+   receive any credits for this particular test.
+2. The number of memory access instructions (`LW, SW, FLW, FSW, ...`) **executed during the simulation run**
+   (Note that this means the actual runtime count, not the count in the asm file) will be collected for both
+   your assembly output (denoted as `S`) and the reference output (denoted `R`). Then, your credits for this
+   particular test would be adjusted by:
+
+        ```(text)
+        if S >= R: R/S * 60%
+        if S < R: 60% + MIN(25%, 1 - S/R) / 25% * 40%
+        ```
+
+        - The reference output and implementation are based on basic-block-only register allocation, without any liveness analysis. Thus we expect your implementation based to perform better in memory accesses.
+        - You will get full credit if you beat the reference memory performance by more than 25%.
+
+Credits for each test cases are distributed evenly. After adjustment of performance, the credits will be accumulated together to reflect your total grades. Then the late submission penalties, if any, would be applied to produce your final grades for the step.
+
+For this step, due to the difficult nature of the assignment, we may curve the grades from the grader based on grades distribution after all grading has been concluded. The curved grades will be uploaded to BrightSpace after the decision is made and grades are calculated accordingly.
+
 ## What you need to do
 
-Pick one of the three options above to implement in this step. Modify your `runme` to print "OPTION X" before starting
-compilation (where "X" is `1`, `2`, or `3`) so we know which option you chose.
+Pick one of the three options above to implement in this step. According to which option you are going for,
+pull in the corresponding repo from your previous steps as starter code,. Modify your `runme` to print "OPTION X" before
+starting compilation (where "X" is `1`, `2`, or `3`) so we know which option you chose.
 
 ### Running your code
 
-To run your code, you can use the Risc simulator, which you can clone from [https://github.com/milindkulkarni/RiscSim](here).
+To run your code, you can use the RISC simulator we have provided for you.
+When using the container environment, this is present in ~/RiscSim.  When
+using the ecegrid environment script, the path to the driver script for it
+is set in $RISCSIM.
 
 You can run an assembly file by running:
 
@@ -232,11 +262,23 @@ You can run an assembly file by running:
 > python3 RiscSim/driver.py [assembly file]
 ```
 
+**For Option 3:**
+
+You can also pass an optional second argument that specifies the number of registers to configure the machine with:
+* In container: `python3 ~/RiscSim/driver.py [assembly file] [# of registers]`
+* On ecegrid: `python3 $RISCSIM [assembly file] [# of registers]`
+
+To collect the number of memory access instructions executed, you could run the simulator with:
+* In container: `python3 ~/RiscSim/driver.py -m [assembly file] [# of registers]`
+* On ecegrid: `python3 $RISCSIM -m [assembly file] [# of registers]`
+
 ### Sample inputs and outputs
 
-We will post some sample inputs and outputs for Options 1 and 2 over the course of the project period. Stay tuned on Piazza.
+The inputs and outputs we will test your program on can be found in the `tests` and `outputs` directories.
 
-(The inputs for Option 3 will be the same as the inputs for Step 5.)
+(The inputs for Option 3 will be the same as the inputs for Step 5. Also the reference register allocations are done with
+basic-block-based algorithm, and no liveness analysis is performed. You need to reason about the liveness analysis part on
+your own if you are taking option 3.)
 
 ## What you need to submit
 
