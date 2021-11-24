@@ -280,6 +280,14 @@ The inputs and outputs we will test your program on can be found in the `tests` 
 basic-block-based algorithm, and no liveness analysis is performed. You need to reason about the liveness analysis part on
 your own if you are taking option 3.)
 
+**Hidden test cases:**
+
+For this step, we will have some hidden secret test cases for each of the options. These test cases are not included in the repo, but will
+be added to the grader and will be included in the grader results.
+
+However all hidden test cases will be checking for correctness only and no performance checks will be performed on them. This means that for
+option 3 all hidden test cases grading will not be adjusted according to performance.
+
 ## What you need to submit
 
 * All of the necessary code for building your compiler.
