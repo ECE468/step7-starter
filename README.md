@@ -261,13 +261,13 @@ If you have extra time, you **can** merge step 5 and step 6 for step 7 to receiv
 
 > Note: For **573** students trying to merge step 5 and step 6, if you take option 1 or 2, you may need to remove/bypass the liveness analysis code in your step 5 code when merging, since liveness analysis with pointers can be particularly tricky. If you take option 3, please be warned that merging could be extremely hard since it makes no sense to bypass liveness analysis anymore, and you **will need to** implement liveness analysis with pointers.
 
-The final grades for step 7 will consist of 40% of the open tests grades and 60% of the hidden tests grades:
+The final grades for step 7 will consist of 30% of the open tests grades and 70% of the hidden tests grades:
 
 ```
-FinalStep7Grades = 0.4 * OpenTestGrades + 0.6 * FinalHiddenGrades
+FinalStep7Grades = 0.3 * OpenTestGrades + 0.7 * FinalHiddenGrades
 ```
 
-> Note: This means that we expect correct submissions without the merging bonuses to receive `40% + 60%*70% = 82%` of all step 7 grades.
+> Note: This means that we expect correct submissions without the merging bonuses to receive `30% + 70%*70% = 79%` of all step 7 grades. This also means that since all steps are weighted equally in the project, the hidden tests part consists of `70% * 1/7 = 10%` of the total project grades, the same as we have stated in the syllabus.
 
 ## What you need to do
 
