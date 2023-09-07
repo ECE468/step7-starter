@@ -1,5 +1,5 @@
 # Step 7: Choose Your Own Adventure
-## Due: Dec 2nd, 5 pm EST (10 pm UTC)
+## Due: Now 28th, 5 pm EST (10 pm UTC)
 
 ## Setting up your repository
 
