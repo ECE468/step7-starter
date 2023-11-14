@@ -243,32 +243,6 @@ Credits for each test cases are distributed evenly. After adjustment of performa
 
 For this step, due to the difficult nature of the assignment, we may curve the grades from the grader based on grades distribution after all grading has been concluded. The curved grades will be uploaded to BrightSpace after the decision is made and grades are calculated accordingly.
 
-## Grading and Hidden tests
-
-For this step, we will have some hidden secret test cases for all submissions. These test cases are not included in the repo, but will
-be added to the grader and will be included in the grader results. All hidden test cases will be checking for correctness only and no performance checks will be performed on them. No performance-related grade adjustments will apply to hidden cases, as well.
-
-These hidden tests are designed to test against all previous step implementations, including both step 5 (Register allocation) and step 6 (Pointers and arrays). They include excessive code that are meant to stress-test your compiler to make sure that in edge cases it still behaves correctly.
-
-Since different options are based on different steps, it is expected that most students will only get a partial grade from hidden tests. Specifically, if you only includes step 5 or step 6 in your final step 7 submission and do everything else correctly, you will have 70% of the hidden test grades.
-
-> Note: this 70% ratio is achieved though the following grading scheme:
->
-> - All hidden test cases will be run twice, once with 32 registers, once with unlimited number of registers, and grades will be calculated for both runs. The final grade for the hidden tests will be `FinalHiddenGrades = max(32RunResults, UnlimitedRunResults * 0.7)`. So if you included step 6 but not step 5 for the submission, you will get 70% of hidden test grades.
-> - Only 30% cases of hidden tests will contain pointers and arrays. So if you included step 5 both not step 6 for the submission, you will get 70% of hidden test grades.
-
-If you have extra time, you **can** merge step 5 and step 6 for step 7 to receive full hidden test grades, but please be aware this is effectively a bonus, it may be very tricky to archive and may cost considerable amount of time, please plan ahead.
-
-> Note: For **573** students trying to merge step 5 and step 6, if you take option 1 or 2, you may need to remove/bypass the liveness analysis code in your step 5 code when merging, since liveness analysis with pointers can be particularly tricky. If you take option 3, please be warned that merging could be extremely hard since it makes no sense to bypass liveness analysis anymore, and you **will need to** implement liveness analysis with pointers.
-
-The final grades for step 7 will consist of 30% of the open tests grades and 70% of the hidden tests grades:
-
-```
-FinalStep7Grades = 0.3 * OpenTestGrades + 0.7 * FinalHiddenGrades
-```
-
-> Note: This means that we expect correct submissions without the merging bonuses to receive `30% + 70%*70% = 79%` of all step 7 grades. This also means that since all steps are weighted equally in the project, the hidden tests part consists of `70% * 1/7 = 10%` of the total project grades, the same as we have stated in the syllabus.
-
 ## What you need to do
 
 Pick one of the three options above to implement in this step. According to which option you are going for,
