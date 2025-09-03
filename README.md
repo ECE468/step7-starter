@@ -3,9 +3,9 @@
 
 ## Setting up your repository
 
-Set up your GitHub classroom repository for step 7 using the link on Brightspace.
+Set up your GitHub classroom repository for step 7 using the link on Piazza.
 
-Set up your project development and testing environment as directed in the [project environment documentations](https://cap.ecn.purdue.edu/compilers/project/).
+Set up your project development and testing environment as directed in the Piazza.
 
 Then clone your repository as directed in the cloning and submitting instructions.
 
