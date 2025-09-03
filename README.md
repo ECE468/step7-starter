@@ -294,4 +294,4 @@ While you may create as many other directories as you would like to organize you
 
 *Do not submit any binaries*. Your git repo should only contain source files; no products of compilation.
 
-See the submission instructions document for instructions on how to submit. You should tag your step 7 submission as `submission`
+See the Piazza post for instructions on how to submit your assignment to Gradescope.
